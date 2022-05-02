@@ -8,19 +8,13 @@ jobs:
   run-npm:
     runs-on: ubuntu-18.04
     steps:
-      - name: "install node job"
-        run: "apt-get update"
-        run: apt-get install node -y
-        run: "node -v"
+      - run: "apt-get update"
+      - run: "apt-get update"
+      - run: apt-get install node -y
+      - run: "node -v"
 
       - name: "Running the test.js script"
         run: node ../../test.js
-      
+
       - name: "Finishing up the script"
         run: echo "Finished...."
-
-
-
-
-
-
