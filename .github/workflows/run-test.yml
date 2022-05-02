@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - run: "sudo apt-get update -y"
-      - run: "apt-get install node -y"
+      - run: "sudo apt-get install node -y"
       - run: "node -v"
 
       - name: "Running the test.js script"
