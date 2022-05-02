@@ -8,13 +8,14 @@ jobs:
   run-npm:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v3
       - run: "sudo apt-get update -y"
       - run: "sudo apt-get install nodejs -y"
       - run: "node -v"
 
       - name: "Running the test.js script"
         run: node test.js
+
+      - run: ls
 
       - name: "Finishing up the script"
         run: echo "Finished...."
