@@ -8,7 +8,7 @@ jobs:
   run-npm:
     runs-on: ubuntu-18.04
     steps:
-      - run: "apt-get update"
+      - run: "sudo apt-get update"
       - run: "apt-get update"
       - run: apt-get install node -y
       - run: "node -v"
