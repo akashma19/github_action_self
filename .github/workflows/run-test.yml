@@ -1,0 +1,26 @@
+name: "Run test.js"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-npm:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "install node job"
+        runs: "apt-get update"
+        runs: "apt-get install node -y"
+        runs: "node -v"
+
+      - name: "Running the test.js script"
+        runs: node ../../test.js
+      
+      - name: "Finishing up the script"
+        runs: echo "Finished...."
+
+
+
+
+
+
