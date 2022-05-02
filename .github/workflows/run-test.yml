@@ -9,15 +9,15 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: "install node job"
-        runs: "apt-get update"
-        runs: "apt-get install node -y"
-        runs: "node -v"
+        run: "apt-get update"
+        run: apt-get install node -y
+        run: "node -v"
 
       - name: "Running the test.js script"
-        runs: node ../../test.js
+        run: node ../../test.js
       
       - name: "Finishing up the script"
-        runs: echo "Finished...."
+        run: echo "Finished...."
 
 
 
