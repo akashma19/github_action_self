@@ -21,3 +21,7 @@ jobs:
         run: echo "Failed status"
       - name: success checkpoint 2
         if: ${{ success() }}
+        run: echo "All steps executed succesfully"
+      - name: always run
+        if: ${{ always() }}
+        run: echo "RUNNNNNNNNNNN"
