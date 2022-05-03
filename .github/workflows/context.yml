@@ -1,0 +1,15 @@
+name: context-action
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  context-action-setup:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: inital env
+        env:
+          secret: ${{ secrets.superstar }}
+          run: node test.js
