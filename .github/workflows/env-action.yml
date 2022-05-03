@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+env:
+  test: true
 jobs:
   env-variabel:
     runs-on: ubuntu-18.04
@@ -13,4 +15,5 @@ jobs:
         env:
           port: 9090
         run: node test.js
-      - run: echo ${{ fromJSON(env.port) }}
+      - run: echo ${{ fromJSON(env.port) }} > outputfile.log
+      - run: cat outputfile.log
