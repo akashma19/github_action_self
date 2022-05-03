@@ -7,6 +7,8 @@ jobs:
   env-variabel:
     runs-on: ubuntu-18.04
     steps:
+      - uses: action/checkout@v3
+
       - name: "defining variable"
         env:
           port: 9090
