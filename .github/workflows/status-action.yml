@@ -12,4 +12,6 @@ jobs:
 
       - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
-      - if: ${{ success() }}
+      - name: status of steps
+        run: echo "checking"
+        if: ${{ success() }}
