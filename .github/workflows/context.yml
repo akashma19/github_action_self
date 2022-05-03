@@ -27,3 +27,5 @@ jobs:
         run: echo '${{ toJSON(steps) }}'
       - name: Dump runner context
         run: echo '${{ toJSON(runner) }}'
+      - name: Dump single key-value context
+        run: echo '${{ toJSON(github.action_status) }}'
