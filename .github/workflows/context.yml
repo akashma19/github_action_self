@@ -32,7 +32,7 @@ jobs:
         run: echo '${{ toJSON(env) }}'
 
       - name: Dump single key-value context
-        run: echo '${{ toJSON(github.action_status) }}'
+        run: echo '${{ toJSON(github.actor_id) }}'
 
       - name: Dump single key-value context
-        run: echo '${{ github.action_status }}'
+        run: echo '${{ github.actor_id }}'
