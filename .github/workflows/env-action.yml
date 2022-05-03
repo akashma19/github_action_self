@@ -8,7 +8,7 @@ env:
   osname: "ubuntu-18.04"
 jobs:
   env-variabel:
-    runs-on: ${{env.osname}}
+    runs-on: ${{ env.osname }}
     steps:
       - uses: actions/checkout@v3
 
