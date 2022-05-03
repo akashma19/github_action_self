@@ -36,7 +36,6 @@ jobs:
         run: echo '${{ toJSON(job)}}'
 
       - name: Dump  steps
-        run: echo '${{ toJSON(steps.env_id.outputs)}}'
-      - run: echo '${{ toJSON(steps.env_id.conclusion)}}'
+        run: echo '${{ toJSON(steps.env_id.outcome)}}'
 
-      - run: echo ${{ steps }}
+      - run: echo ${{ toJSON(steps) }}
