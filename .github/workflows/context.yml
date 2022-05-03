@@ -15,3 +15,15 @@ jobs:
           secret: ${{ secrets.superstar }}
           action_status: "action status is success"
         run: node test.js
+  context-testing:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Dump github context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
+      - name: Dump job context
+        run: echo '${{ toJSON(job) }}'
+      - name: Dump step context
+        run: echo '${{ toJSON(steps) }}'
+      - name: Dump runner context
+        run: echo '${{ toJSON(runner) }}'
