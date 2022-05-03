@@ -13,5 +13,5 @@ jobs:
       - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
       - name: status of steps
-        run: echo "checking"
         if: ${{ success() }}
+        run: echo "Running last command"
