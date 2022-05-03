@@ -22,6 +22,11 @@ jobs:
 
   donwload-files:
     runs-on: ubuntu-18.04
+    needs: upload-file
     steps:
-      - name: "test run"
-        run: echo "WOW"
+      - name: "download file"
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+        run: cat output-log-file
+      - run: echo "I AM DONE"
