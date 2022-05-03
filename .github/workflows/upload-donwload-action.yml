@@ -15,7 +15,7 @@ jobs:
         shell: bash
 
       - name: uplaod the file
-        uses: action/upload-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: "output-log-file"
           path: output.log
