@@ -29,7 +29,7 @@ jobs:
         run: echo '${{ toJSON(steps) }}'
 
       - name: Dump runner env
-        run: echo '${{ toJSON(env) }}'
+        run: echo '${{ env }}'
 
       - name: Dump single key-value env
         run: echo '${{ github.env }}'
