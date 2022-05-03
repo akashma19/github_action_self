@@ -13,4 +13,4 @@ jobs:
         env:
           port: 9090
         run: node test.js
-      - run: echo "Done"
+      - run: echo ${{ port }}
