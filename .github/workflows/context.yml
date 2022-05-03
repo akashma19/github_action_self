@@ -26,6 +26,7 @@ jobs:
         run: echo '${{ toJSON(github) }}'
 
       - name: Dump single value env
+        id: env_id
         run: echo '${{ env.v1 }}'
 
       - name: Dump  env
@@ -33,3 +34,9 @@ jobs:
 
       - name: Dump  jobs
         run: echo '${{ toJSON(job)}}'
+
+      - name: Dump  steps
+        run: echo '${{ toJSON(steps.env_id.outputs)}}'
+      - run: echo '${{ toJSON(steps.env_id.conclusion)}}'
+
+      - run: echo ${{ steps }}
