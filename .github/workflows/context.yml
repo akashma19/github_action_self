@@ -31,8 +31,5 @@ jobs:
       - name: Dump runner env
         run: echo '${{ toJSON(env) }}'
 
-      - name: Dump single key-value context
-        run: echo '${{ toJSON(github.actor_id) }}'
-
-      - name: Dump single key-value context
-        run: echo '${{ github.actor_id }}'
+      - name: Dump single key-value env
+        run: echo '${{ github.env }}'
