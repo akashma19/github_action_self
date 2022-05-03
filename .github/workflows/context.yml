@@ -38,4 +38,4 @@ jobs:
       - name: Dump  steps
         run: echo '${{ toJSON(steps.env_id.outcome)}}'
 
-      - run: echo ${{ toJSON(steps) }}
+      - run: echo '${{ toJSON(steps) }}'
