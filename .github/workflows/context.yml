@@ -21,11 +21,18 @@ jobs:
       - name: Dump github context
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
+
       - name: Dump job context
         run: echo '${{ toJSON(job) }}'
+
       - name: Dump step context
         run: echo '${{ toJSON(steps) }}'
-      - name: Dump runner context
-        run: echo '${{ toJSON(runner) }}'
+
+      - name: Dump runner env
+        run: echo '${{ toJSON(env) }}'
+
       - name: Dump single key-value context
         run: echo '${{ toJSON(github.action_status) }}'
+
+      - name: Dump single key-value context
+        run: echo '${{ github.action_status }}'
