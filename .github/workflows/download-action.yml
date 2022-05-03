@@ -1,0 +1,19 @@
+name: "donwload-action"
+on:
+  push:
+    branches:
+      - main
+jobs:
+  download-jobs:
+    runs-on: ubuntu-18.04
+    needs: upload-file
+    steps:
+      - name: download test
+        uses: actions/download-artifact@v3
+        with:
+          name: output-log-file
+
+      - run: ls
+      - run: cat output.log
+
+      - run: echo "I AM DONE from donwload"
