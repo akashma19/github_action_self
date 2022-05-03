@@ -9,6 +9,7 @@ jobs:
   context-action-setup:
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v3
       - name: inital env
         env:
           secret: ${{ secrets.superstar }}
