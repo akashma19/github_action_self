@@ -12,3 +12,4 @@ jobs:
 
       - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
+      - if: ${{ success() }}
