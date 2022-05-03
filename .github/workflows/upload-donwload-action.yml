@@ -29,6 +29,6 @@ jobs:
         with:
           name: output-log-file
       - run: ls
-      # - run: cat output-log-file
+      - run: cat output.log
 
       - run: echo "I AM DONE"
