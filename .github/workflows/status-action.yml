@@ -15,3 +15,7 @@ jobs:
       - name: status of steps
         if: ${{ success() }}
         run: echo "Running last command"
+      - run: node hello.js
+      - name: "status of failed"
+        if: ${{ failure() }}
+        run: echo "Failed status"
