@@ -15,5 +15,5 @@ jobs:
         env:
           port: 9090
         run: node test.js
-      - run: echo "hello" > outputfile.log
+      - run: echo ${{fromJSON(env.port)}} > outputfile.log
       - run: cat outputfile.log
