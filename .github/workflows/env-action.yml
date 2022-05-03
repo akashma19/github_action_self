@@ -3,12 +3,13 @@ on:
   push:
     branches:
       - main
-env:
-  test: true
-  osname: "ubuntu-18.04"
+
 jobs:
   env-variabel:
     runs-on: ${{ env.osname }}
+    env:
+      test: true
+      osname: "ubuntu-18.04"
     steps:
       - uses: actions/checkout@v3
 
