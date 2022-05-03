@@ -13,4 +13,5 @@ jobs:
       - name: inital env
         env:
           secret: ${{ secrets.superstar }}
+          action_status: ${{ github.action_status }}
         run: node test.js
