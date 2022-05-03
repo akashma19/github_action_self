@@ -5,9 +5,10 @@ on:
       - main
 env:
   test: true
+  osname: "ubuntu-18.04"
 jobs:
   env-variabel:
-    runs-on: ubuntu-18.04
+    runs-on: ${{env.osname}}
     steps:
       - uses: actions/checkout@v3
 
@@ -15,5 +16,5 @@ jobs:
         env:
           port: 9090
         run: node test.js
-      - run: echo ${{fromJSON(env.port)}} > outputfile.log
+      - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
