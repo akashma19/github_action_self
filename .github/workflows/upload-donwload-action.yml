@@ -28,6 +28,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: output-log-file
-      - run: cat output-log-file
+      - run: ls
+      # - run: cat output-log-file
 
       - run: echo "I AM DONE"
