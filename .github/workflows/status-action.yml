@@ -5,10 +5,10 @@ on:
     branches:
       - main
 jobs:
-  status:
+  status-check:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v3
+
       - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
-      - if: ${{ success() }}
