@@ -1,0 +1,14 @@
+name: env-action
+on:
+  push:
+    branches:
+      - main
+jobs:
+  env-variabel:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "defining variable"
+        env:
+          port: 9090
+        run: node test.js
+      - run: echo "Done"
