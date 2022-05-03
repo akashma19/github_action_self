@@ -12,10 +12,12 @@ jobs:
 
       - run: echo "hello" > outputfile.log
       - run: cat outputfile.log
-      - name: status of steps
+      - name: success checkpoint 1
         if: ${{ success() }}
         run: echo "Running last command"
       - run: node hello.js
-      - name: "status of failed"
+      - name: "failed"
         if: ${{ failure() }}
         run: echo "Failed status"
+      - name: success checkpoint 2
+        if: ${{ success() }}
