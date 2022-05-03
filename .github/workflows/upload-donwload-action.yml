@@ -1,0 +1,27 @@
+name: "upload-donwload-action"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-file:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "generate file"
+        run: |
+          expr 1 + 1 > output.log
+        shell: bash
+
+      - name: uplaod the file
+        uses: action/upload-artifact@v3
+        with:
+          name: "output-log-file"
+          path: output.log
+
+  donwload-files:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: "test run"
+        run: echo "WOW"
