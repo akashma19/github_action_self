@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  v1: "new version"
+
 jobs:
   context-action-setup:
     runs-on: ubuntu-18.04
@@ -22,14 +25,8 @@ jobs:
         id: github_context_step
         run: echo '${{ toJSON(github) }}'
 
-      - name: Dump job context
-        run: echo '${{ toJSON(job) }}'
-
-      - name: Dump step context
-        run: echo '${{ toJSON(steps) }}'
-
       - name: Dump runner env
-        run: echo '${{ env }}'
+        run: echo '${{ env.v1 }}'
 
       - name: Dump single key-value env
-        run: echo '${{ github.env }}'
+        run: echo '${{ toJSON(env)}}'
