@@ -6,7 +6,6 @@ on:
 jobs:
   download-jobs:
     runs-on: ubuntu-18.04
-    needs: upload-file
     steps:
       - name: download test
         uses: actions/download-artifact@v3
