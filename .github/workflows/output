@@ -28,7 +28,7 @@ jobs:
       - name: setting up variable
         id: setup_variable
       
-        run: "::set-output name=greeting::Hello World"
+        run: echo "::set-output name=greeting::Hello World"
   job2:
     runs-on: ubuntu-latest
     needs: job1
